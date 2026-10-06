@@ -151,6 +151,7 @@ a:hover { color: var(--coral); }
   text-shadow: .045em .045em 0 #F2C9A4;
   margin-bottom: 20px;
 }
+.hero h1 .hero__op { display: block; font-size: .5em; line-height: 1.2; letter-spacing: 0; color: var(--coral); margin-bottom: .3em; }
 .hero__sub { font-size: 1.15rem; max-width: 44ch; color: var(--tinta); margin-bottom: 24px; }
 
 .fatos { display: grid; gap: 14px; margin-bottom: 28px; }
@@ -159,8 +160,8 @@ a:hover { color: var(--coral); }
 .fatos strong { color: var(--navy); font-weight: 700; }
 .fatos [data-bind="dataCurta"]::first-letter { text-transform: none; }
 
-.hero__acoes { display: grid; gap: 12px; margin-bottom: 14px; }
-.hero__prazo { font-size: .98rem; color: var(--tinta-suave); margin: 0; }
+.hero__acoes { margin-bottom: 8px; }
+.btn--grande { width: 100%; max-width: 480px; min-height: 60px; font-size: 1.15rem; }
 
 .hero__arte { position: relative; width: min(100%, 440px); margin-inline: auto; padding-bottom: 28px; }
 .arco-foto {
@@ -187,7 +188,6 @@ a:hover { color: var(--coral); }
 }
 
 @media (min-width: 640px) {
-  .hero__acoes { grid-template-columns: auto auto; justify-content: start; }
   .hero__escudo { width: 120px; right: -26px; }
 }
 @media (min-width: 960px) {
@@ -202,7 +202,7 @@ a:hover { color: var(--coral); }
 /* ---------- Seções ---------- */
 .secao { padding: var(--secao-y) 0; }
 .secao--areia { background: var(--areia); }
-.secao__cab { max-width: 640px; margin-bottom: clamp(32px, 5vw, 56px); }
+.secao__cab { max-width: 680px; margin-bottom: clamp(32px, 5vw, 56px); }
 .secao__cab p { margin: 14px 0 0; font-size: 1.1rem; color: var(--tinta-suave); }
 
 /* Sobre */

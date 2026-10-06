@@ -177,14 +177,6 @@ const CONFIG = {
     }
   });
 
-  /* ---------- Foco ao chegar em um cartão de papel (vindo do hero) ---------- */
-  document.querySelectorAll('.hero__acoes a').forEach((a) => {
-    a.addEventListener('click', () => {
-      const alvo = document.querySelector(a.getAttribute('href'));
-      if (alvo) setTimeout(() => alvo.focus({ preventScroll: true }), reduzMovimento ? 0 : 500);
-    });
-  });
-
   /* ---------- Revelar ao rolar (fade curto) ---------- */
   const revelaveis = document.querySelectorAll('[data-reveal]');
   if ('IntersectionObserver' in window && !reduzMovimento) {
