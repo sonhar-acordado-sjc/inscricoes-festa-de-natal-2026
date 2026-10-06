@@ -66,7 +66,7 @@
 
 <main id="conteudo">
 
-  <!-- 2. HERO -->
+  <!-- HERO -->
   <section class="hero" aria-labelledby="hero-titulo">
     <div class="hero__meio-tom" aria-hidden="true"></div>
     <div class="wrap hero__grade">
@@ -105,7 +105,7 @@
     </div>
   </section>
 
-  <!-- 3. SOBRE -->
+  <!-- SOBRE -->
   <section class="secao secao--areia" id="sobre" aria-labelledby="sobre-titulo">
     <div class="wrap sobre">
       <div class="sobre__texto" data-reveal>
@@ -125,23 +125,7 @@
     </div>
   </section>
 
-  <!-- 4. QUEM PODE PARTICIPAR -->
-  <section class="faixa" aria-labelledby="quem-titulo">
-    <div class="faixa__meio-tom" aria-hidden="true"></div>
-    <div class="wrap faixa__grade">
-      <div class="faixa__idade" data-reveal>
-        <svg class="faixa__escudo" viewBox="0 0 120 140" aria-hidden="true"><use href="#escudo"/></svg>
-        <p class="idade"><span class="idade__num">16 a 35</span> <span class="idade__un">anos</span></p>
-      </div>
-      <div class="faixa__texto" data-reveal>
-        <h2 id="quem-titulo">Quem pode participar</h2>
-        <p>As atividades são pensadas para voluntários de <strong>16 a 35 anos</strong> que estejam de coração aberto e com disposição para fazer o dia de uma criança.</p>
-        <p>Está fora dessa faixa e quer ajudar? Fale com a gente e vamos achar a melhor forma de você participar.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. COMO PARTICIPAR -->
+  <!-- COMO PARTICIPAR -->
   <section class="secao" id="como-participar" aria-labelledby="como-titulo">
     <div class="wrap">
       <div class="secao__cab" data-reveal>
@@ -169,8 +153,86 @@
     </div>
   </section>
 
-  <!-- 6. ESCOLHA SEU PAPEL -->
-  <section class="secao secao--areia" id="inscricao" aria-labelledby="papel-titulo">
+  <!-- QUEM PODE PARTICIPAR -->
+  <section class="faixa" aria-labelledby="quem-titulo">
+    <div class="faixa__meio-tom" aria-hidden="true"></div>
+    <div class="wrap faixa__grade">
+      <div class="faixa__idade" data-reveal>
+        <svg class="faixa__escudo" viewBox="0 0 120 140" aria-hidden="true"><use href="#escudo"/></svg>
+        <p class="idade"><span class="idade__num">16 a 35</span> <span class="idade__un">anos</span></p>
+      </div>
+      <div class="faixa__texto" data-reveal>
+        <h2 id="quem-titulo">Quem pode participar</h2>
+        <p>As atividades são pensadas para voluntários de <strong>16 a 35 anos</strong> que estejam de coração aberto e com disposição para fazer o dia de uma criança.</p>
+        <p>Está fora dessa faixa e quer ajudar? Fale com a gente e vamos achar a melhor forma de você participar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUANDO E ONDE -->
+  <section class="secao" id="quando-e-onde" aria-labelledby="onde-titulo">
+    <div class="wrap">
+      <div class="secao__cab" data-reveal>
+        <h2 id="onde-titulo">Quando e onde</h2>
+      </div>
+
+      <div class="onde">
+        <div class="ingresso" data-reveal>
+          <p class="ingresso__dia" data-bind="diaSemana"></p>
+          <p class="ingresso__data" data-bind="dataExtenso"></p>
+          <p class="ingresso__hora" data-bind="horario"></p>
+          <p class="ingresso__prazo">Inscrições até <strong data-bind="prazoCurto"></strong></p>
+        </div>
+
+        <div class="onde__local" data-reveal>
+          <h3 data-bind="local"></h3>
+          <p class="endereco" data-bind="endereco"></p>
+          <div class="onde__acoes">
+            <a class="btn btn--petroleo" data-bind-href="mapaUrl" href="#" target="_blank" rel="noopener noreferrer">Como chegar</a>
+            <a class="btn btn--contorno" href="evento-natal.ics" download>Adicionar ao calendário</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formações obrigatórias: preencha CONFIG.formacoes em js/main.js -->
+      <div class="formacoes" data-reveal>
+        <h3>Formações obrigatórias</h3>
+        <p class="formacoes__nota">Você precisa ir a uma delas. A inscrição só vale depois da formação de abertura.</p>
+        <ul class="formacoes__lista" id="formacoes-lista" hidden></ul>
+        <div class="vazio" id="formacoes-vazio">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="8" y="12" width="48" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+            <path d="M8 26h48" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M20 6v10M44 6v10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <use href="#estrela" x="22" y="32" width="20" height="20" style="color: var(--mostarda)"/>
+          </svg>
+          <div>
+            <p class="vazio__titulo">Datas das formações em breve</p>
+            <p>Assim que forem definidas, elas aparecem aqui. Dúvidas? <a data-bind-href="whatsappUrl" href="#">Chame a gente no WhatsApp</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUANTO CUSTA -->
+  <section class="custo" aria-labelledby="custo-titulo">
+    <div class="wrap custo__grade" data-reveal>
+      <div class="custo__valores" aria-hidden="true">
+        <p class="custo__preco" data-bind="precoInscricao"></p>
+        <p class="custo__mais">+ <span data-bind="preco"></span> da camiseta, se precisar</p>
+      </div>
+      <div>
+        <h2 id="custo-titulo">Quanto custa</h2>
+        <p>O valor da inscrição é <strong data-bind="precoInscricao"></strong>, mais o valor da camiseta, caso você precise.</p>
+        <p>A inscrição é <strong>100% revertida para a Festa de Natal</strong>: ajuda na alimentação dos voluntários e das crianças, nas atrações, nas atividades e em toda a estrutura da festa.</p>
+        <p>A camiseta custa <strong data-bind="preco"></strong>, o valor de compra. Você usa na festa e leva para casa de lembrança desse dia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESCOLHA SEU PAPEL -->
+  <section class="secao" id="inscricao" aria-labelledby="papel-titulo">
     <div class="wrap">
       <div class="secao__cab" data-reveal>
         <h2 id="papel-titulo">Escolha seu papel</h2>
@@ -219,70 +281,8 @@
     </div>
   </section>
 
-  <!-- 7. QUANDO E ONDE -->
-  <section class="secao" id="quando-e-onde" aria-labelledby="onde-titulo">
-    <div class="wrap">
-      <div class="secao__cab" data-reveal>
-        <h2 id="onde-titulo">Quando e onde</h2>
-      </div>
-
-      <div class="onde">
-        <div class="ingresso" data-reveal>
-          <p class="ingresso__dia" data-bind="diaSemana"></p>
-          <p class="ingresso__data" data-bind="dataExtenso"></p>
-          <p class="ingresso__hora" data-bind="horario"></p>
-          <p class="ingresso__prazo">Inscrições até <strong data-bind="prazoCurto"></strong></p>
-        </div>
-
-        <div class="onde__local" data-reveal>
-          <h3 data-bind="local"></h3>
-          <p class="endereco" data-bind="endereco"></p>
-          <div class="onde__acoes">
-            <a class="btn btn--petroleo" data-bind-href="mapaUrl" href="#" target="_blank" rel="noopener noreferrer">Como chegar</a>
-            <a class="btn btn--contorno" href="evento-natal.ics" download>Adicionar ao calendário</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Formações obrigatórias: preencha CONFIG.formacoes em js/main.js -->
-      <div class="formacoes" data-reveal>
-        <h3>Formações obrigatórias</h3>
-        <p class="formacoes__nota">Você precisa ir a uma delas. A inscrição só vale depois da formação de abertura.</p>
-        <ul class="formacoes__lista" id="formacoes-lista" hidden></ul>
-        <div class="vazio" id="formacoes-vazio">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <rect x="8" y="12" width="48" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
-            <path d="M8 26h48" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            <path d="M20 6v10M44 6v10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            <use href="#estrela" x="22" y="32" width="20" height="20" style="color: var(--mostarda)"/>
-          </svg>
-          <div>
-            <p class="vazio__titulo">Datas das formações em breve</p>
-            <p>Assim que forem definidas, elas aparecem aqui. Dúvidas? <a data-bind-href="whatsappUrl" href="#">Chame a gente no WhatsApp</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. QUANTO CUSTA -->
-  <section class="custo" aria-labelledby="custo-titulo">
-    <div class="wrap custo__grade" data-reveal>
-      <div class="custo__valores" aria-hidden="true">
-        <p class="custo__preco" data-bind="precoInscricao"></p>
-        <p class="custo__mais">+ <span data-bind="preco"></span> da camiseta, se precisar</p>
-      </div>
-      <div>
-        <h2 id="custo-titulo">Quanto custa</h2>
-        <p>O valor da inscrição é <strong data-bind="precoInscricao"></strong>, mais o valor da camiseta, caso você precise.</p>
-        <p>A inscrição é <strong>100% revertida para a Festa de Natal</strong>: ajuda na alimentação dos voluntários e das crianças, nas atrações, nas atividades e em toda a estrutura da festa.</p>
-        <p>A camiseta custa <strong data-bind="preco"></strong>, o valor de compra. Você usa na festa e leva para casa de lembrança desse dia.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. GALERIA -->
-  <section class="secao" id="galeria" aria-labelledby="galeria-titulo">
+  <!-- GALERIA -->
+  <section class="secao secao--areia" id="galeria" aria-labelledby="galeria-titulo">
     <div class="wrap">
       <div class="secao__cab" data-reveal>
         <h2 id="galeria-titulo">Quem já foi super-herói</h2>
@@ -311,7 +311,7 @@
   </section>
 
   <!-- VÍDEO (preencha CONFIG.videoYoutube em js/main.js) -->
-  <section class="secao video" id="video" aria-labelledby="video-titulo" hidden>
+  <section class="secao secao--areia video" id="video" aria-labelledby="video-titulo" hidden>
     <div class="wrap video__grade">
       <div class="video__texto" data-reveal>
         <h2 id="video-titulo">Como foi a festa</h2>
@@ -325,8 +325,8 @@
     </div>
   </section>
 
-  <!-- 10. FAQ -->
-  <section class="secao secao--areia" id="duvidas" aria-labelledby="duvidas-titulo">
+  <!-- FAQ -->
+  <section class="secao" id="duvidas" aria-labelledby="duvidas-titulo">
     <div class="wrap wrap--estreito">
       <div class="secao__cab" data-reveal>
         <h2 id="duvidas-titulo">Dúvidas frequentes</h2>
@@ -367,7 +367,7 @@
     </div>
   </section>
 
-  <!-- 11. CONTATO -->
+  <!-- CONTATO -->
   <section class="contato" id="contato" aria-labelledby="contato-titulo">
     <div class="contato__meio-tom" aria-hidden="true"></div>
     <div class="wrap contato__grade">
@@ -392,7 +392,7 @@
   </div>
 </footer>
 
-<!-- 12. WhatsApp flutuante -->
+<!-- WhatsApp flutuante -->
 <a class="zap" id="zap" href="#" target="_blank" rel="noopener noreferrer" aria-label="Preciso de ajuda com a inscrição: abrir conversa no WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.300-4.200A8 8 0 1 1 8.300 18.800Z" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round"/><path d="M9.200 8.800c.3 2.600 2.400 4.800 5 5.400l1.200-1.300-1.900-1-.8.700c-.9-.4-1.700-1.200-2.100-2.100l.7-.8-1-1.900Z" fill="currentColor"/></svg>
   <span class="zap__txt">Preciso de ajuda</span>
