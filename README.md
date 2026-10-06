@@ -1,7 +1,7 @@
 # Festa de Natal 2026 · Sonhar Acordado SJC
 
 Site de inscrição de voluntários. HTML, CSS e JavaScript puros, sem build.
-Para ver localmente, abra `index.html` no navegador.
+Para ver localmente, abra `index.html` no navegador. Com o arquivo aberto direto (`file://`), o player do YouTube mostra erro 153 e o site avisa; para ver o vídeo localmente, rode `python -m http.server` na pasta e abra `http://localhost:8000`.
 
 ## Editar os dados do ano
 
@@ -14,6 +14,7 @@ Quase tudo fica no objeto `CONFIG`, no topo de [`js/main.js`](js/main.js):
 | Valor da inscrição e da camiseta | `CONFIG.inscricaoPreco` e `CONFIG.camisetaPreco` |
 | Links dos Google Forms | `CONFIG.FORM_APOIO` e `CONFIG.FORM_CRIANCA` (com `''` ou `'#'` o botão vira "Em breve") |
 | Formações obrigatórias | `CONFIG.formacoes` (lista vazia mostra "Datas das formações em breve") |
+| Vídeo da festa (ID do YouTube; vazio esconde a seção) | `CONFIG.videoYoutube` |
 | WhatsApp, Instagram, e-mail | `CONFIG.contato` |
 
 Exemplo de formação:

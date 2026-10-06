@@ -19,6 +19,9 @@ const CONFIG = {
   FORM_APOIO: '#',
   FORM_CRIANCA: '#',
 
+  // Vídeo da festa anterior: só o ID do YouTube (o trecho depois de youtu.be/). Vazio esconde a seção.
+  videoYoutube: 'W_ctpeb-MZI',
+
   // Formações obrigatórias. Enquanto a lista estiver vazia, a página mostra "em breve".
   // Exemplo: { data: '2026-11-07', horario: '09:00 às 12:00', local: 'Nome do local', endereco: 'Rua, número – bairro' }
   formacoes: [],
@@ -100,6 +103,24 @@ const CONFIG = {
     btn.textContent = 'Em breve';
     a.replaceWith(btn);
   });
+
+  /* ---------- Vídeo ---------- */
+  const secVideo = document.getElementById('video');
+  const idVideo = (CONFIG.videoYoutube || '').trim();
+  if (idVideo) {
+    secVideo.hidden = false;
+    document.getElementById('video-link').href = `https://youtu.be/${idVideo}`;
+    const frame = document.getElementById('video-frame');
+    if (location.protocol === 'file:') {
+      // O YouTube recusa o player (erro 153) em páginas abertas como arquivo local. Online funciona.
+      const aviso = document.createElement('p');
+      aviso.className = 'video__aviso';
+      aviso.textContent = 'O player só aparece com o site publicado. Use o link "Assistir no YouTube".';
+      frame.replaceWith(aviso);
+    } else {
+      frame.src = `https://www.youtube-nocookie.com/embed/${idVideo}?rel=0`;
+    }
+  }
 
   /* ---------- Formações ---------- */
   const lista = document.getElementById('formacoes-lista');
