@@ -1,0 +1,96 @@
+- generic [active] [ref=e1]:
+  - img "Capa da Festa de Natal" [ref=e3]
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - heading "Sonhar Acordado SJC" [level=2] [ref=e6]
+      - heading "A Espetacular Festa de Natal" [level=4] [ref=e7]
+    - paragraph [ref=e10]: Dezembro é logo ali... e quando chega esse mês lindo, já sabemos que vem recheado de alegria, família, muitas comemorações e a mágica FESTA DE NATAL da nossa ONG maravilhosaaaaa!!!! UHUUUUUUL!!!
+    - generic [ref=e11]:
+      - heading "Sobre a Festa" [level=4] [ref=e12]
+      - paragraph [ref=e14]: Nossa festa contará com os valores do Sonhar, repleta de comidas deliciosas, brincadeiras, atrações e muitas surpresas. Contamos com você para tornar esse dia muito mais mágico e encantador!
+    - generic [ref=e15]:
+      - heading "Quem Pode Participar?" [level=4] [ref=e16]
+      - generic [ref=e17]:
+        - paragraph [ref=e18]: Este evento é feito para todos que estão de coração aberto e com disposição para tornar o dia de uma criança sensacional!
+        - paragraph [ref=e19]: Nossas atividades são pensadas para jovens voluntários de idade entre 16 a 35 anos, mas caso você não se enquadre nesta faixa etária, entre em contato via WhatsApp, e-mail ou redes sociais para encontrar a melhor maneira de participar.
+    - generic [ref=e20]:
+      - heading "Como Participar?" [level=4] [ref=e21]
+      - generic [ref=e22]:
+        - paragraph [ref=e23]:
+          - text: Basta preencher nosso formulário até o final e
+          - strong [ref=e24]: comparecer obrigatoriamente
+          - text: em um dos dias de formação disponibilizados.
+        - paragraph [ref=e25]: A efetivação da sua inscrição depende do seu comparecimento na formação de abertura.
+    - generic [ref=e26]:
+      - heading "Onde e Quando?" [level=4] [ref=e27]
+      - list [ref=e29]:
+        - listitem [ref=e30]:
+          - generic [ref=e31]: 
+          - strong [ref=e32]: "Data:"
+          - text: 15 de Dezembro (domingo).
+          - link "" [ref=e33] [cursor=pointer]:
+            - /url: evento-natal.ics
+        - listitem [ref=e35]:
+          - generic [ref=e36]: 
+          - strong [ref=e37]: "Horário:"
+          - text: Das 09:00 às 18:00 horas.
+        - listitem [ref=e38]:
+          - generic [ref=e39]: 
+          - strong [ref=e40]: "Local:"
+          - text: Seminário Diocesano Santa Teresinha.
+        - listitem [ref=e41]:
+          - generic [ref=e42]: 
+          - strong [ref=e43]: "Endereço:"
+          - text: Av. São João, 2650 - Jardim das Colinas, São José dos Campos - SP, 12242-000
+          - link "" [ref=e44] [cursor=pointer]:
+            - /url: https://www.google.com.br/maps/place/Semin%C3%A1rio+Diocesano+Santa+Teresinha/@-23.2115558,-45.9152132,17z/data=!3m1!4b1!4m6!3m5!1s0x94cc3585c39dc807:0xa5e9327d681562b6!8m2!3d-23.2115608!4d-45.9103423!16s%2Fg%2F1tfjm75n?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D
+    - generic [ref=e46]:
+      - heading "Quanto?" [level=4] [ref=e47]
+      - generic [ref=e48]:
+        - paragraph [ref=e49]:
+          - strong [ref=e50]: R$ 40,00 reais da camiseta caso você precise.
+        - paragraph [ref=e51]:
+          - strong [ref=e52]: Cobramos o valor de compra da camiseta que você usará durante a Festa e poderá levar para casa como lembrança desse dia incrível.
+    - generic [ref=e53]:
+      - heading "Contato" [level=4] [ref=e54]
+      - list [ref=e56]:
+        - listitem [ref=e57]:
+          - generic [ref=e58]: 
+          - strong [ref=e59]: "WhatsApp:"
+          - link "(12) 99219-5271 " [ref=e60] [cursor=pointer]:
+            - /url: https://whatsa.me/5512992195271/?t=Ol%C3%A1,%20estou%20fazendo%20a%20inscri%C3%A7%C3%A3o%20para%20a%20Festa%20de%20Natal%20e%20preciso%20de%20ajuda.
+            - text: (12) 99219-5271
+            - generic [ref=e61]: 
+        - listitem [ref=e62]:
+          - 'link " Instagram: @sonharacordadosjc" [ref=e63] [cursor=pointer]':
+            - /url: https://www.instagram.com/sonharacordadosjc/
+            - generic [ref=e64]: 
+            - strong [ref=e65]: "Instagram:"
+            - text: "@sonharacordadosjc"
+        - link:
+          - /url: https://www.instagram.com/sonharacordadosjc/
+        - listitem [ref=e66]:
+          - generic [ref=e67]: 
+          - strong [ref=e68]: "E-mail:"
+          - text: grandesfestas.sjc@sonharacordado.org.br
+    - link "Se inscrever " [ref=e70] [cursor=pointer]:
+      - /url: inscricoes.html
+      - text: Se inscrever
+      - generic [ref=e71]: 
+  - contentinfo [ref=e72]:
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - generic [ref=e75]: 
+        - text: grandesfestas.sjc@sonharacordado.org.br
+      - link " @sonharacordadosjc" [ref=e77] [cursor=pointer]:
+        - /url: https://www.instagram.com/sonharacordadosjc/
+        - generic [ref=e78]: 
+        - text: "@sonharacordadosjc"
+      - link " (12) 99219-5271" [ref=e80] [cursor=pointer]:
+        - /url: https://whatsa.me/5512992195271/?t=Ol%C3%A1,%20estou%20fazendo%20a%20inscri%C3%A7%C3%A3o%20para%20a%20Festa%20de%20Natal%20e%20preciso%20de%20ajuda.
+        - generic [ref=e81]: 
+        - text: (12) 99219-5271
+    - paragraph [ref=e82]: Sonhar Acordado SJC © 2024. Todos os direitos reservados.
+  - link "Chamar no WhatsApp":
+    - /url: https://whatsa.me/5512992195271/?t=Olá, estou fazendo a inscrição para a Festa de Natal e preciso de ajuda.
+    - img "Chamar no WhatsApp" [ref=e83] [cursor=pointer]

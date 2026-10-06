@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sonhar Acordado SJC//Festa de Natal 2026//PT-BR
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:festa-de-natal-2026@sonharacordadosjc
+DTSTAMP:20261006T120000Z
+DTSTART:20261129T120000Z
+DTEND:20261129T210000Z
+SUMMARY:Festa de Natal - Sonhar Acordado SJC
+LOCATION:Conselho Central Sul de São José dos Campos\, Av. Ouro Fino\, 880 - Bosque dos Eucaliptos\, São José dos Campos - SP\, 12233-540
+DESCRIPTION:Festa de Natal 2026: Super-heróis salvam o Natal. Das 09:00 às 18:00. Como chegar: https://maps.app.goo.gl/wE5zNxSRgB67ovay9
+URL:https://maps.app.goo.gl/wE5zNxSRgB67ovay9
+END:VEVENT
+END:VCALENDAR

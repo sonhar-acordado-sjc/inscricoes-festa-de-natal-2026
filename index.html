@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Festa de Natal 2026 · Sonhar Acordado SJC</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Grandstander:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Símbolos reutilizáveis: arco-íris da logo e escudo de herói -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="arcos" viewBox="0 0 120 70">
+      <g fill="none" stroke-linecap="round" stroke-width="9">
+        <path d="M20 64A40 40 0 0 1 100 64" stroke="var(--arco-1, #B8453B)"/>
+        <path d="M33 64A27 27 0 0 1 87 64" stroke="var(--arco-2, #D9764E)"/>
+        <path d="M46 64A14 14 0 0 1 74 64" stroke="var(--arco-3, #E2B54A)"/>
+      </g>
+    </symbol>
+    <symbol id="raios" viewBox="0 0 120 70">
+      <path d="M108.9 53.6L118.7 51.5M100.5 34.6L108.5 28.7M85 20.7L90 12M60 14L60 4M35 20.7L30 12M19.5 34.6L11.5 28.7M11.1 53.6L1.3 51.5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="escudo" viewBox="0 0 120 140">
+      <path d="M60 4 114 22v46c0 34-25 56-54 68C31 124 6 102 6 68V22Z" fill="var(--navy)"/>
+      <path d="M60 14 104 29v39c0 28-20 46-44 57C36 114 16 96 16 68V29Z" fill="none" stroke="var(--mostarda)" stroke-width="3"/>
+      <g transform="translate(18 40)">
+        <use href="#arcos" width="84" height="49" style="--arco-1:#E98C7F;--arco-2:#F2A978;--arco-3:#E2B54A"/>
+      </g>
+      <path d="m60 98 4.2 8.6 9.4 1.3-6.8 6.6 1.6 9.4-8.4-4.4-8.4 4.4 1.6-9.4-6.8-6.6 9.4-1.3Z" fill="var(--mostarda)" transform="translate(0 -4)"/>
+    </symbol>
+    <symbol id="estrela" viewBox="0 0 24 24">
+      <path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.1 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo" id="topo">
+  <div class="topo__in">
+    <a class="marca" href="#topo" aria-label="Sonhar Acordado SJC, início"><img class="marca__logo" src="assets/img/optimized/logo-96.png" srcset="assets/img/optimized/logo-96.png 1x, assets/img/optimized/logo-192.png 2x" width="95" height="96" alt=""></a>
+
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-btn__barras" aria-hidden="true"></span>
+      <span class="menu-btn__txt">Menu</span>
+    </button>
+
+    <nav class="menu" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#como-participar">Como participar</a></li>
+        <li><a href="#quando-e-onde">Quando e onde</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+      <a class="btn btn--coral btn--sm" href="#inscricao">Quero participar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- 2. HERO -->
+  <section class="hero" aria-labelledby="hero-titulo">
+    <div class="hero__meio-tom" aria-hidden="true"></div>
+    <div class="wrap hero__grade">
+      <div class="hero__texto">
+        <h1 id="hero-titulo">Super-heróis salvam o Natal</h1>
+        <p class="hero__sub">Neste ano, o uniforme é uma camiseta e o super-poder é atenção. Venha ser voluntário na festa que dá a muitas crianças um Natal especial.</p>
+
+        <ul class="fatos" aria-label="Data e local">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v3M17 2v3M3.5 9h17M5 4.5h14a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 19 20.500H5A1.5 1.5 0 0 1 3.500 19V6A1.5 1.5 0 0 1 5 4.500Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong data-bind="diaDataCurta"></strong><br><span data-bind="horario"></span></span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.500-5.800-6.500-11a6.500 6.500 0 0 1 13 0c0 5.200-6.500 11-6.500 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.300" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            <span><strong data-bind="local"></strong><br>Av. Ouro Fino, 880 – Bosque dos Eucaliptos</span>
+          </li>
+        </ul>
+
+        <div class="hero__acoes">
+          <a class="btn btn--coral" href="#papel-apoio">Quero apoiar a festa</a>
+          <a class="btn btn--petroleo" href="#papel-crianca">Quero ficar com uma criança</a>
+        </div>
+        <p class="hero__prazo">Inscrições até <strong data-bind="prazoCurto"></strong></p>
+      </div>
+
+      <div class="hero__arte">
+        <div class="arco-foto">
+          <img src="assets/img/optimized/dsc-0070-960.webp"
+               srcset="assets/img/optimized/dsc-0070-400.webp 400w, assets/img/optimized/dsc-0070-640.webp 640w, assets/img/optimized/dsc-0070-960.webp 960w"
+               sizes="(min-width: 960px) 440px, 78vw"
+               width="960" height="1440" fetchpriority="high"
+               alt="Duas crianças abraçadas a um voluntário de boné vermelho e óculos, todos sorrindo e fazendo sinal de joinha.">
+        </div>
+        <svg class="hero__escudo" viewBox="0 0 120 140" role="img" aria-label="Emblema de herói com o arco-íris do Sonhar Acordado"><use href="#escudo"/></svg>
+        <p class="balao">Todo super-herói começa com um sim.</p>
+        <svg class="hero__estrela" viewBox="0 0 24 24" aria-hidden="true"><use href="#estrela"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SOBRE -->
+  <section class="secao" id="sobre" aria-labelledby="sobre-titulo">
+    <div class="wrap sobre">
+      <div class="sobre__texto" data-reveal>
+        <h2 id="sobre-titulo">Um dia inteiro feito para as crianças</h2>
+        <p>A Festa de Natal do Sonhar Acordado é preparada o ano todo por voluntários. É um dia de comida gostosa, brincadeiras, atrações e muitas surpresas, sempre com os valores do Sonhar no centro.</p>
+        <p>Em 2026, os voluntários são os super-heróis. Ninguém precisa de capa de verdade: basta coração aberto e disposição para tornar o dia de uma criança sensacional.</p>
+        <p>Você faz parte do que torna essa festa possível.</p>
+      </div>
+      <figure class="sobre__foto" data-reveal>
+        <img src="assets/img/optimized/dsc-0510-800.webp"
+             srcset="assets/img/optimized/dsc-0510-480.webp 480w, assets/img/optimized/dsc-0510-800.webp 800w, assets/img/optimized/dsc-0510-1200.webp 1200w"
+             sizes="(min-width: 960px) 520px, 92vw"
+             width="1200" height="800" loading="lazy"
+             alt="Grande grupo de crianças e voluntários posando juntos, de braços erguidos, em um salão decorado para o Natal.">
+        <figcaption>Festa de Natal 2025</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4. QUEM PODE PARTICIPAR -->
+  <section class="faixa" aria-labelledby="quem-titulo">
+    <div class="faixa__meio-tom" aria-hidden="true"></div>
+    <div class="wrap faixa__grade">
+      <div class="faixa__idade" data-reveal>
+        <svg class="faixa__escudo" viewBox="0 0 120 140" aria-hidden="true"><use href="#escudo"/></svg>
+        <p class="idade"><span class="idade__num">16 a 35</span> <span class="idade__un">anos</span></p>
+      </div>
+      <div class="faixa__texto" data-reveal>
+        <h2 id="quem-titulo">Quem pode participar</h2>
+        <p>As atividades são pensadas para voluntários de <strong>16 a 35 anos</strong> que estejam de coração aberto e com disposição para fazer o dia de uma criança.</p>
+        <p>Está fora dessa faixa e quer ajudar? Fale com a gente e vamos achar a melhor forma de você participar.</p>
+        <ul class="links-contato">
+          <li><a class="link-claro" data-bind-href="whatsappUrl" href="#">WhatsApp</a></li>
+          <li><a class="link-claro" data-bind-href="emailUrl" href="#">E-mail</a></li>
+          <li><a class="link-claro" data-bind-href="instagramUrl" href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. COMO PARTICIPAR -->
+  <section class="secao" id="como-participar" aria-labelledby="como-titulo">
+    <div class="wrap">
+      <div class="secao__cab" data-reveal>
+        <h2 id="como-titulo">Como participar</h2>
+        <p>São três passos. O segundo é o que confirma a sua vaga.</p>
+      </div>
+
+      <ol class="passos">
+        <li data-reveal>
+          <span class="passo__num" aria-hidden="true">1</span>
+          <h3>Faça sua inscrição</h3>
+          <p>Escolha como quer ajudar e preencha o formulário até <strong data-bind="prazoCurto"></strong>.</p>
+        </li>
+        <li data-reveal>
+          <span class="passo__num" aria-hidden="true">2</span>
+          <h3>Vá a uma formação</h3>
+          <p>A formação é obrigatória. <strong>A inscrição só é efetivada com o seu comparecimento na formação de abertura.</strong></p>
+        </li>
+        <li data-reveal>
+          <span class="passo__num" aria-hidden="true">3</span>
+          <h3>Viva a festa</h3>
+          <p>No dia <strong data-bind="dataCurta"></strong>, é com você: um dia inteiro de brincadeira, cuidado e muita risada.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 6. ESCOLHA SEU PAPEL -->
+  <section class="secao secao--areia" id="inscricao" aria-labelledby="papel-titulo">
+    <div class="wrap">
+      <div class="secao__cab" data-reveal>
+        <h2 id="papel-titulo">Escolha seu papel</h2>
+        <p>Os dois são essenciais para a festa acontecer. Escolha o que combina mais com você.</p>
+      </div>
+
+      <div class="papeis">
+        <article class="papel papel--apoio" id="papel-apoio" tabindex="-1" aria-labelledby="apoio-titulo" data-reveal>
+          <img src="assets/img/optimized/dsc-0010-800.webp"
+               srcset="assets/img/optimized/dsc-0010-480.webp 480w, assets/img/optimized/dsc-0010-800.webp 800w, assets/img/optimized/dsc-0010-1200.webp 1200w"
+               sizes="(min-width: 960px) 500px, 92vw"
+               width="1200" height="800" loading="lazy"
+               alt="Cinco voluntários de camiseta laranja sorriem sob um arco de balões coloridos.">
+          <div class="papel__corpo">
+            <h3 id="apoio-titulo">Voluntário de apoio</h3>
+            <p class="papel__lema">Você faz a festa acontecer antes mesmo de ela começar.</p>
+            <ul class="lista-estrela">
+              <li><strong>Logística:</strong> check-in de crianças e voluntários, alimentação, arrecadação de alimentos e transporte das crianças até o local.</li>
+              <li><strong>Decoração:</strong> transformar o espaço para receber voluntários e crianças.</li>
+              <li><strong>Atividades das estações:</strong> criar e organizar, em equipe, as brincadeiras que transmitem os valores do Sonhar.</li>
+            </ul>
+            <p class="aviso"><strong>Importante:</strong> o voluntário de apoio não fica com uma criança ao longo da festa. Você é uma extensão da coordenação.</p>
+            <a class="btn btn--coral btn--bloco" data-form="apoio" href="#" target="_blank" rel="noopener noreferrer">Me inscrever</a>
+          </div>
+        </article>
+
+        <article class="papel papel--crianca" id="papel-crianca" tabindex="-1" aria-labelledby="crianca-titulo" data-reveal>
+          <img src="assets/img/optimized/dsc-0272-800.webp"
+               srcset="assets/img/optimized/dsc-0272-480.webp 480w, assets/img/optimized/dsc-0272-800.webp 800w, assets/img/optimized/dsc-0272-1200.webp 1200w"
+               sizes="(min-width: 960px) 500px, 92vw"
+               width="1200" height="800" loading="lazy"
+               alt="Uma menina e uma voluntária sorriem uma para a outra em uma mesa, com desenhos e canetinhas coloridas.">
+          <div class="papel__corpo">
+            <h3 id="crianca-titulo">Voluntário com criança</h3>
+            <p class="papel__lema">Seu super-poder é atenção.</p>
+            <ul class="lista-estrela">
+              <li>Você acompanha <strong>uma criança</strong> durante todo o evento.</li>
+              <li>Ensina, diverte e dá todo o carinho e a atenção que puder.</li>
+              <li>Vira o super tio ou a super tia em quem ela confia o dia inteiro, com afeto e muitas risadas.</li>
+            </ul>
+            <p class="aviso aviso--leve">Um dia único para vocês dois.</p>
+            <a class="btn btn--petroleo btn--bloco" data-form="crianca" href="#" target="_blank" rel="noopener noreferrer">Me inscrever</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. QUANDO E ONDE -->
+  <section class="secao" id="quando-e-onde" aria-labelledby="onde-titulo">
+    <div class="wrap">
+      <div class="secao__cab" data-reveal>
+        <h2 id="onde-titulo">Quando e onde</h2>
+      </div>
+
+      <div class="onde">
+        <div class="ingresso" data-reveal>
+          <p class="ingresso__dia" data-bind="diaSemana"></p>
+          <p class="ingresso__data" data-bind="dataExtenso"></p>
+          <p class="ingresso__hora" data-bind="horario"></p>
+          <p class="ingresso__prazo">Inscrições até <strong data-bind="prazoCurto"></strong></p>
+        </div>
+
+        <div class="onde__local" data-reveal>
+          <h3 data-bind="local"></h3>
+          <p class="endereco" data-bind="endereco"></p>
+          <div class="onde__acoes">
+            <a class="btn btn--petroleo" data-bind-href="mapaUrl" href="#" target="_blank" rel="noopener noreferrer">Como chegar</a>
+            <a class="btn btn--contorno" href="evento-natal.ics" download>Adicionar ao calendário</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formações obrigatórias: preencha CONFIG.formacoes em js/main.js -->
+      <div class="formacoes" data-reveal>
+        <h3>Formações obrigatórias</h3>
+        <p class="formacoes__nota">Você precisa ir a uma delas. A inscrição só vale depois da formação de abertura.</p>
+        <ul class="formacoes__lista" id="formacoes-lista" hidden></ul>
+        <div class="vazio" id="formacoes-vazio">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="8" y="12" width="48" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+            <path d="M8 26h48" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M20 6v10M44 6v10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <use href="#estrela" x="22" y="32" width="20" height="20" style="color: var(--mostarda)"/>
+          </svg>
+          <div>
+            <p class="vazio__titulo">Datas das formações em breve</p>
+            <p>Assim que forem definidas, elas aparecem aqui. Dúvidas? <a data-bind-href="whatsappUrl" href="#">Chame a gente no WhatsApp</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. QUANTO CUSTA -->
+  <section class="custo" aria-labelledby="custo-titulo">
+    <div class="wrap custo__grade" data-reveal>
+      <div class="custo__valores" aria-hidden="true">
+        <p class="custo__preco" data-bind="precoInscricao"></p>
+        <p class="custo__mais">+ <span data-bind="preco"></span> da camiseta, se precisar</p>
+      </div>
+      <div>
+        <h2 id="custo-titulo">Quanto custa</h2>
+        <p>O valor da inscrição é <strong data-bind="precoInscricao"></strong>, mais o valor da camiseta, caso você precise.</p>
+        <p>A inscrição é <strong>100% revertida para a Festa de Natal</strong>: ajuda na alimentação dos voluntários e das crianças, nas atrações, nas atividades e em toda a estrutura da festa.</p>
+        <p>A camiseta custa <strong data-bind="preco"></strong>, o valor de compra. Você usa na festa e leva para casa de lembrança desse dia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. GALERIA -->
+  <section class="secao" id="galeria" aria-labelledby="galeria-titulo">
+    <div class="wrap">
+      <div class="secao__cab" data-reveal>
+        <h2 id="galeria-titulo">Quem já foi super-herói</h2>
+        <p>Momentos da Festa de Natal 2025. Toque em uma foto para ampliar.</p>
+      </div>
+
+      <ul class="galeria">
+        <li class="g g--grande"><button type="button" data-i="0" aria-label="Ampliar foto: equipe de voluntários em frente aos balões">
+          <img src="assets/img/optimized/dsc-0011-800.webp" srcset="assets/img/optimized/dsc-0011-480.webp 480w, assets/img/optimized/dsc-0011-800.webp 800w, assets/img/optimized/dsc-0011-1200.webp 1200w" sizes="(min-width: 960px) 50vw, 100vw" width="1200" height="800" loading="lazy" alt="Seis voluntários de camiseta laranja abraçados e sorrindo, em frente a um arco de balões coloridos."></button></li>
+        <li class="g g--alta"><button type="button" data-i="1" aria-label="Ampliar foto: crianças e voluntário fazendo joinha">
+          <img src="assets/img/optimized/dsc-0070-640.webp" srcset="assets/img/optimized/dsc-0070-400.webp 400w, assets/img/optimized/dsc-0070-640.webp 640w" sizes="(min-width: 960px) 25vw, 50vw" width="640" height="960" loading="lazy" alt="Duas crianças abraçadas a um voluntário de boné vermelho e óculos, todos sorrindo e fazendo sinal de joinha."></button></li>
+        <li class="g"><button type="button" data-i="2" aria-label="Ampliar foto: menina fazendo sinal de paz">
+          <img src="assets/img/optimized/dsc-0072-480.webp" srcset="assets/img/optimized/dsc-0072-480.webp 480w, assets/img/optimized/dsc-0072-800.webp 800w" sizes="(min-width: 960px) 25vw, 50vw" width="800" height="533" loading="lazy" alt="Menina sorridente faz sinal de paz com a mão em frente ao rosto; um menino aparece atrás dela."></button></li>
+        <li class="g"><button type="button" data-i="3" aria-label="Ampliar foto: voluntária com os braços erguidos">
+          <img src="assets/img/optimized/dsc-0182-480.webp" srcset="assets/img/optimized/dsc-0182-480.webp 480w, assets/img/optimized/dsc-0182-800.webp 800w" sizes="(min-width: 960px) 25vw, 50vw" width="800" height="533" loading="lazy" alt="Voluntária de óculos sorrindo com os braços para o alto, em frente a um brinquedo inflável."></button></li>
+        <li class="g g--alta"><button type="button" data-i="4" aria-label="Ampliar foto: crianças e voluntária sorrindo">
+          <img src="assets/img/optimized/dsc-0218-640.webp" srcset="assets/img/optimized/dsc-0218-400.webp 400w, assets/img/optimized/dsc-0218-640.webp 640w" sizes="(min-width: 960px) 25vw, 50vw" width="640" height="960" loading="lazy" alt="Crianças e uma voluntária de camiseta branca sorrindo e fazendo sinal de paz, em um gramado."></button></li>
+        <li class="g"><button type="button" data-i="5" aria-label="Ampliar foto: menina e voluntária desenhando">
+          <img src="assets/img/optimized/dsc-0272-480.webp" srcset="assets/img/optimized/dsc-0272-480.webp 480w, assets/img/optimized/dsc-0272-800.webp 800w" sizes="(min-width: 960px) 25vw, 50vw" width="800" height="533" loading="lazy" alt="Uma menina e uma voluntária sorriem uma para a outra em uma mesa, com desenhos e canetinhas coloridas."></button></li>
+        <li class="g g--grande"><button type="button" data-i="6" aria-label="Ampliar foto: todos juntos no salão">
+          <img src="assets/img/optimized/dsc-0510-800.webp" srcset="assets/img/optimized/dsc-0510-480.webp 480w, assets/img/optimized/dsc-0510-800.webp 800w, assets/img/optimized/dsc-0510-1200.webp 1200w" sizes="(min-width: 960px) 50vw, 100vw" width="1200" height="800" loading="lazy" alt="Grande grupo de crianças e voluntários posando juntos, de braços erguidos, em um salão decorado para o Natal."></button></li>
+        <li class="g"><button type="button" data-i="7" aria-label="Ampliar foto: voluntários sob o arco de balões">
+          <img src="assets/img/optimized/dsc-0010-480.webp" srcset="assets/img/optimized/dsc-0010-480.webp 480w, assets/img/optimized/dsc-0010-800.webp 800w" sizes="(min-width: 960px) 25vw, 50vw" width="800" height="533" loading="lazy" alt="Cinco voluntários de camiseta laranja sorriem sob um arco de balões coloridos."></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10. FAQ -->
+  <section class="secao secao--areia" id="duvidas" aria-labelledby="duvidas-titulo">
+    <div class="wrap wrap--estreito">
+      <div class="secao__cab" data-reveal>
+        <h2 id="duvidas-titulo">Dúvidas frequentes</h2>
+      </div>
+
+      <div class="faq" data-reveal>
+        <details>
+          <summary>Posso participar se tiver menos de 16 ou mais de 35 anos?</summary>
+          <div class="faq__r"><p>As atividades são pensadas para voluntários de 16 a 35 anos. Se você está fora dessa faixa, fale com a gente por WhatsApp para encontrarmos a melhor forma de você participar.</p></div>
+        </details>
+        <details>
+          <summary>Preciso ir à formação?</summary>
+          <div class="faq__r"><p>Sim. A formação é obrigatória, e a sua inscrição só é efetivada com o comparecimento na formação de abertura.</p>
+          <!-- CONFIRMAR: o que acontece nas formações, quanto tempo duram e se é preciso confirmar presença. --></div>
+        </details>
+        <details>
+          <summary>E se eu não puder ir no dia da formação?</summary>
+          <div class="faq__r"><p>Escolha outra das datas disponíveis assim que elas forem divulgadas. Se nenhuma servir para você, fale com a gente.</p>
+          <!-- CONFIRMAR: se haverá mais de uma data de formação e se existe alternativa para quem não puder comparecer. --></div>
+        </details>
+        <details>
+          <summary>Qual é a diferença entre os dois papéis?</summary>
+          <div class="faq__r"><p>O <strong>voluntário de apoio</strong> ajuda antes e durante a festa (logística, decoração e atividades das estações) e não fica com uma criança. O <strong>voluntário com criança</strong> acompanha uma criança durante todo o evento, do começo ao fim.</p></div>
+        </details>
+        <details>
+          <summary>A camiseta é obrigatória?</summary>
+          <div class="faq__r"><p>Sim, ela é obrigatória. Se você já tem uma camiseta do Sonhar (laranja para apoio, branca para voluntário com criança), pode usá-la no dia da festa. Se precisar de uma nova, você paga <span data-bind="preco"></span>. É o valor de compra, e a camiseta fica com você de lembrança.</p></div>
+        </details>
+        <details>
+          <summary>Posso me inscrever junto com amigos?</summary>
+          <div class="faq__r"><p>A inscrição é individual, mas você pode se inscrever para um amigo ou enviar o link para ele se inscrever.</p></div>
+        </details>
+        <details>
+          <summary>Com quem eu falo se tiver outra dúvida?</summary>
+          <div class="faq__r"><p>Com a gente: mande uma mensagem pelo <a data-bind-href="whatsappUrl" href="#">WhatsApp</a> e responderemos qualquer dúvida.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. CONTATO -->
+  <section class="contato" id="contato" aria-labelledby="contato-titulo">
+    <div class="contato__meio-tom" aria-hidden="true"></div>
+    <div class="wrap contato__grade">
+      <div data-reveal>
+        <h2 id="contato-titulo">Fale com a gente</h2>
+        <p>Qualquer dúvida sobre a inscrição, é só chamar.</p>
+      </div>
+      <ul class="contato__lista" data-reveal>
+        <li><span>WhatsApp</span><a class="link-claro" data-bind-href="whatsappUrl" data-bind="whatsappTexto" href="#"></a></li>
+        <li><span>Instagram</span><a class="link-claro" data-bind-href="instagramUrl" data-bind="instagramTexto" href="#" target="_blank" rel="noopener noreferrer"></a></li>
+        <li><span>E-mail</span><a class="link-claro" data-bind-href="emailUrl" data-bind="email" href="#"></a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape__in">
+    <p class="marca marca--rodape"><img class="marca__logo" src="assets/img/optimized/logo-96.png" srcset="assets/img/optimized/logo-96.png 1x, assets/img/optimized/logo-192.png 2x" width="95" height="96" alt="Sonhar Acordado"></p>
+    <p>© 2026 Sonhar Acordado SJC</p>
+  </div>
+</footer>
+
+<!-- 12. WhatsApp flutuante -->
+<a class="zap" id="zap" href="#" target="_blank" rel="noopener noreferrer" aria-label="Preciso de ajuda com a inscrição: abrir conversa no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.300-4.200A8 8 0 1 1 8.300 18.800Z" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round"/><path d="M9.200 8.800c.3 2.600 2.400 4.800 5 5.400l1.200-1.300-1.900-1-.8.700c-.9-.4-1.700-1.200-2.100-2.100l.7-.8-1-1.900Z" fill="currentColor"/></svg>
+  <span class="zap__txt">Preciso de ajuda</span>
+</a>
+
+<!-- Lightbox -->
+<dialog class="lb" id="lb" aria-label="Galeria de fotos">
+  <div class="lb__barra">
+    <p class="lb__cont" id="lb-cont" aria-live="polite"></p>
+    <button class="lb__fechar" type="button" id="lb-fechar" aria-label="Fechar galeria">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <figure class="lb__fig">
+    <img id="lb-img" alt="" width="1200" height="800">
+  </figure>
+  <button class="lb__nav lb__nav--ant" type="button" id="lb-ant" aria-label="Foto anterior">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="lb__nav lb__nav--prox" type="button" id="lb-prox" aria-label="Próxima foto">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</dialog>
+
+<script src="js/main.js"></script>
+</body>
+</html>
