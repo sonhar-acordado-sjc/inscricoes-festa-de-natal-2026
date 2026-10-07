@@ -19,6 +19,9 @@ const CONFIG = {
   FORM_APOIO: '#',
   FORM_CRIANCA: '#',
 
+  // Mensagem do botão "Enviar para um amigo" (o link da página é adicionado ao final).
+  mensagemCompartilhar: 'Vem ser voluntário na Festa de Natal do Sonhar Acordado SJC? Veja como participar:',
+
   // Vídeo da festa anterior: só o ID do YouTube (o trecho depois de youtu.be/). Vazio esconde a seção.
   videoYoutube: 'W_ctpeb-MZI',
 
@@ -103,6 +106,22 @@ const CONFIG = {
     btn.textContent = 'Em breve';
     a.replaceWith(btn);
   });
+
+  /* ---------- Enviar para um amigo ---------- */
+  const btnCompartilhar = document.getElementById('compartilhar');
+  if (btnCompartilhar) {
+    btnCompartilhar.addEventListener('click', async () => {
+      const url = location.href.split('#')[0];
+      const texto = CONFIG.mensagemCompartilhar;
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: document.title, text: texto, url });
+        } catch (e) { /* a pessoa fechou o menu de compartilhar */ }
+      } else {
+        window.open(`https://wa.me/?text=${encodeURIComponent(texto + ' ' + url)}`, '_blank', 'noopener,noreferrer');
+      }
+    });
+  }
 
   /* ---------- Vídeo ---------- */
   const secVideo = document.getElementById('video');

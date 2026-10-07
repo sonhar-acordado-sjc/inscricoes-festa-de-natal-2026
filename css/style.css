@@ -277,6 +277,10 @@ a:hover { color: var(--coral); }
 .papel__corpo { padding: 28px 26px 30px; display: flex; flex-direction: column; flex: 1; }
 .papel--apoio h3 { color: var(--coral); }
 .papel__lema { font: 600 1.15rem/1.35 var(--f-titulo); color: var(--tinta); margin: 6px 0 20px; }
+.camiseta { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; margin: -8px 0 20px; padding: 6px 14px 6px 8px; background: var(--areia); border-radius: 999px; font-size: .95rem; font-weight: 600; color: var(--tinta); }
+.camiseta__cor { width: 20px; height: 20px; border-radius: 50%; flex: none; border: 2px solid var(--tinta-suave); }
+.camiseta__cor--laranja { background: #F28A3C; border-color: #C96A1F; }
+.camiseta__cor--branca { background: #fff; border-color: var(--tinta-suave); }
 .lista-estrela { display: grid; gap: 12px; margin-bottom: 22px; }
 .lista-estrela li { position: relative; padding-left: 30px; }
 .lista-estrela li::before {
@@ -318,10 +322,12 @@ a:hover { color: var(--coral); }
 
 .formacoes { border: 2px dashed var(--terracota); border-radius: var(--r-lg); padding: 28px 26px; background: var(--papel); }
 .formacoes h3 { margin-bottom: 6px; }
-.formacoes__nota { color: var(--tinta-suave); margin-bottom: 20px; }
+.formacoes__nota { color: var(--tinta-suave); max-width: 68ch; margin-bottom: 12px; }
+.formacoes__nota--forte { color: var(--tinta); font-weight: 600; margin-bottom: 22px; }
 .vazio { display: flex; gap: 18px; align-items: center; }
 .vazio[hidden], .formacoes__lista[hidden] { display: none; }
 .vazio svg { width: 64px; height: 64px; flex: none; color: var(--navy); }
+@media (max-width: 479px) { .vazio { flex-direction: column; align-items: flex-start; gap: 12px; } }
 .vazio p { margin: 0; }
 .vazio__titulo { font: 800 1.2rem var(--f-titulo); color: var(--navy); margin-bottom: 4px; }
 .formacoes__lista { display: grid; gap: 14px; }
@@ -329,7 +335,7 @@ a:hover { color: var(--coral); }
 .formacao__dia { flex: none; min-width: 72px; text-align: center; background: var(--navy); color: var(--mostarda); border-radius: var(--r-sm); padding: 10px 8px; font: 800 1.1rem var(--f-titulo); text-transform: uppercase; }
 
 /* Quanto custa */
-.custo { background: var(--areia); padding: clamp(48px, 7vw, 80px) 0; }
+.custo { background: var(--creme); padding: clamp(48px, 7vw, 80px) 0; }
 .custo__grade { display: grid; gap: 20px; align-items: start; }
 .custo__preco { margin: 0; font: 800 clamp(3rem, 12vw, 5rem)/1 var(--f-titulo); color: var(--coral); }
 .custo h2 { font-size: clamp(1.6rem, 3.6vw, 2.2rem); margin-bottom: 10px; }
