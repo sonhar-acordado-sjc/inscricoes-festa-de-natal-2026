@@ -16,8 +16,8 @@ const CONFIG = {
   camisetaPreco: 40,                // em reais
 
   // Links dos Google Forms. Deixe '' ou '#' e o botão aparece como "Em breve".
-  FORM_APOIO: '#',
-  FORM_CRIANCA: '#',
+  FORM_APOIO: 'https://forms.gle/8a2M4RGSmDD23W7s5',
+  FORM_CRIANCA: 'https://forms.gle/AA8UxRfc7j2c3odBA',
 
   // Mensagem do botão "Enviar para um amigo" (o link da página é adicionado ao final).
   mensagemCompartilhar: 'Vem ser voluntário na Festa de Natal do Sonhar Acordado SJC? Veja como participar:',
@@ -26,8 +26,12 @@ const CONFIG = {
   videoYoutube: 'W_ctpeb-MZI',
 
   // Formações obrigatórias. Enquanto a lista estiver vazia, a página mostra "em breve".
-  // Exemplo: { data: '2026-11-07', horario: '09:00 às 12:00', local: 'Nome do local', endereco: 'Rua, número – bairro' }
-  formacoes: [],
+  // O local é o mesmo para todas as datas. Se uma data tiver outro local, acrescente local/endereco nela.
+  formacaoLocal: { local: 'Centro Missão - Regnum Christi SJC', endereco: 'R. Manoel Bandeira, 720 - Jardim das Indústrias' },
+  formacoes: [
+    { data: '2026-10-27', horario: 'às 19h30' },
+    { data: '2026-11-07', horario: 'às 09h30' }
+  ],
 
   contato: {
     whatsapp: '5512992195271',      // só números, com DDI e DDD
@@ -152,7 +156,7 @@ const CONFIG = {
       const d = parseData(f.data);
       const dia = document.createElement('span');
       dia.className = 'formacao__dia';
-      dia.textContent = fmt(d, { day: '2-digit', month: 'short' }).replace('.', '');
+      dia.textContent = fmt(d, { day: '2-digit', month: 'short' }).replace('.', '').replace(' de ', ' ');
       const corpo = document.createElement('span');
       const t = document.createElement('strong');
       t.textContent = `${fmt(d, { weekday: 'long' })}${f.horario ? ', ' + f.horario : ''}`;
@@ -163,6 +167,14 @@ const CONFIG = {
       li.append(dia, corpo);
       lista.append(li);
     });
+    const { local, endereco } = CONFIG.formacaoLocal || {};
+    if (local) {
+      document.getElementById('formacoes-local-nome').textContent = local;
+      document.getElementById('formacoes-local-endereco').textContent = endereco || '';
+      document.getElementById('formacoes-local').hidden = false;
+      const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      document.getElementById('formacoes-alerta').hidden = norm(endereco) === norm(CONFIG.evento.endereco);
+    }
   }
 
   /* ---------- WhatsApp flutuante ---------- */

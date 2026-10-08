@@ -176,30 +176,35 @@
         <h2 id="onde-titulo">Quando e onde</h2>
       </div>
 
-      <div class="onde">
-        <div class="ingresso" data-reveal>
-          <p class="ingresso__dia" data-bind="diaSemana"></p>
-          <p class="ingresso__data" data-bind="dataExtenso"></p>
-          <p class="ingresso__hora" data-bind="horario"></p>
-          <p class="ingresso__prazo">Inscrições até <strong data-bind="prazoCurto"></strong></p>
-        </div>
-
-        <div class="onde__local" data-reveal>
-          <h3 data-bind="local"></h3>
-          <p class="endereco" data-bind="endereco"></p>
-          <div class="onde__acoes">
-            <a class="btn btn--petroleo" data-bind-href="mapaUrl" href="#" target="_blank" rel="noopener noreferrer">Como chegar</a>
-            <a class="btn btn--contorno" href="evento-natal.ics" download>Adicionar ao calendário</a>
+      <div class="quando">
+        <div class="festa" data-reveal>
+          <h3 class="festa__titulo">A festa</h3>
+          <p class="festa__dia" data-bind="diaSemana"></p>
+          <p class="festa__data" data-bind="dataExtenso"></p>
+          <p class="festa__hora" data-bind="horario"></p>
+          <div class="festa__local">
+            <p class="festa__nome" data-bind="local"></p>
+            <p class="festa__endereco" data-bind="endereco"></p>
           </div>
+          <div class="festa__acoes">
+            <a class="btn btn--creme" data-bind-href="mapaUrl" href="#" target="_blank" rel="noopener noreferrer">Como chegar</a>
+            <a class="btn btn--contorno-claro" href="evento-natal.ics" download>Adicionar ao calendário</a>
+          </div>
+          <p class="festa__prazo">Inscrições até <strong data-bind="prazoCurto"></strong></p>
         </div>
-      </div>
 
       <!-- Formações obrigatórias: preencha CONFIG.formacoes em js/main.js -->
       <div class="formacoes" data-reveal>
-        <h3>Formações obrigatórias</h3>
-        <p class="formacoes__nota">É o primeiro encontro com os voluntários: apresentamos o Sonhar Acordado e o que fazemos, passamos as informações práticas da Festa de Natal e tiramos todas as dúvidas. Dura, em média, 1 hora e meia.</p>
+        <h3 class="bloco__titulo">Formação obrigatória</h3>
+        <p class="formacoes__antes">Acontece antes da festa.</p>
+        <p class="formacoes__nota">Primeiro encontro com os voluntários: apresentamos o Sonhar Acordado, passamos as informações práticas da festa e tiramos todas as dúvidas. Dura, em média, 1 hora e meia.</p>
         <p class="formacoes__nota formacoes__nota--forte">Você precisa ir a uma das datas, e a inscrição só vale depois da formação de abertura.</p>
         <ul class="formacoes__lista" id="formacoes-lista" hidden></ul>
+        <p class="formacoes__local" id="formacoes-local" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.500-5.800-6.500-11a6.500 6.500 0 0 1 13 0c0 5.200-6.500 11-6.500 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.300" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span><span class="formacoes__rotulo">Local da formação</span><br><strong id="formacoes-local-nome"></strong><br><span id="formacoes-local-endereco"></span></span>
+        </p>
+        <p class="formacoes__alerta" id="formacoes-alerta" hidden><strong>Atenção:</strong> a formação não é no local da festa. Confira o endereço acima antes de sair de casa.</p>
         <div class="vazio" id="formacoes-vazio">
           <svg viewBox="0 0 64 64" aria-hidden="true">
             <rect x="8" y="12" width="48" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
@@ -212,6 +217,7 @@
             <p>Assim que forem definidas, elas aparecem aqui. Dúvidas? <a data-bind-href="whatsappUrl" href="#">Chame a gente no WhatsApp</a>.</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -253,14 +259,14 @@
                alt="Uma menina e uma voluntária sorriem uma para a outra em uma mesa, com desenhos e canetinhas coloridas.">
           <div class="papel__corpo">
             <h3 id="crianca-titulo">Voluntário com criança</h3>
-            <p class="papel__lema">Seu super-poder é atenção.</p>
+            <p class="papel__lema">Por um dia, você é o super tio ou a super tia de uma criança.</p>
             <p class="camiseta"><span class="camiseta__cor camiseta__cor--branca" aria-hidden="true"></span>Camiseta branca</p>
             <ul class="lista-estrela">
-              <li>Você acompanha <strong>uma criança</strong> durante todo o evento.</li>
-              <li>Ensina, diverte e dá todo o carinho e a atenção que puder.</li>
-              <li>Vira o super tio ou a super tia em quem ela confia o dia inteiro, com afeto e muitas risadas.</li>
+              <li><strong>Do começo ao fim:</strong> você acompanha uma criança durante todo o evento, da chegada à despedida.</li>
+              <li><strong>Brincar e ensinar:</strong> divertir, ensinar e dar todo o amor e a atenção que ela merece, nas brincadeiras e atividades da festa.</li>
+              <li><strong>Ser a pessoa de confiança:</strong> é com você que ela vai contar durante a festa, entre brincadeiras e muitas risadas.</li>
             </ul>
-            <p class="aviso aviso--leve">Um dia único para vocês dois.</p>
+            <p class="aviso">Prefere ajudar nos bastidores, sem ficar com uma criança? Escolha o <a href="#papel-apoio">voluntário de apoio</a>.</p>
             <a class="btn btn--petroleo btn--bloco" data-form="crianca" href="#" target="_blank" rel="noopener noreferrer">Me inscrever</a>
           </div>
         </article>
@@ -354,8 +360,7 @@
         </details>
         <details>
           <summary>E se eu não puder ir no dia da formação?</summary>
-          <div class="faq__r"><p>Escolha outra das datas disponíveis assim que elas forem divulgadas. Se nenhuma servir para você, fale com a gente.</p>
-          <!-- CONFIRMAR: se haverá mais de uma data de formação e se existe alternativa para quem não puder comparecer. --></div>
+          <div class="faq__r"><p>Temos mais de uma data de formação, que aparecem em "Quando e onde". Escolha a que couber na sua agenda. Se nenhuma servir para você, nos envie uma mensagem pelo <a data-bind-href="whatsappUrl" href="#">WhatsApp</a> e vamos verificar o que podemos fazer para ajudar.</p></div>
         </details>
         <details>
           <summary>Qual é a diferença entre os dois papéis?</summary>
