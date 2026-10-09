@@ -224,6 +224,29 @@ const CONFIG = {
     revelaveis.forEach((el) => el.classList.add('visivel'));
   }
 
+  /* ---------- Heróis: parallax leve na rolagem ---------- */
+  const quebras = document.querySelectorAll('.quebra__heroi');
+  if (!reduzMovimento && quebras.length) {
+    const atualizarHerois = () => {
+      const vh = window.innerHeight;
+      quebras.forEach((el) => {
+        const r = el.parentElement.getBoundingClientRect();
+        if (r.bottom > -200 && r.top < vh + 200) {
+          el.style.setProperty('--py', `${(((vh / 2 - r.top) / vh) * 36).toFixed(1)}px`);
+        }
+      });
+    };
+    let agendado = false;
+    const aoRolar = () => {
+      if (agendado) return;
+      agendado = true;
+      requestAnimationFrame(() => { agendado = false; atualizarHerois(); });
+    };
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    window.addEventListener('resize', aoRolar);
+    atualizarHerois();
+  }
+
   /* ---------- Lightbox ---------- */
   const fotos = [
     { arq: 'dsc-0011', w: 1600 },
