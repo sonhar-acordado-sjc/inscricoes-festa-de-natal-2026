@@ -546,7 +546,7 @@ a:hover { color: var(--coral); }
 
 /* WhatsApp flutuante */
 .zap {
-  position: fixed; right: 16px; bottom: 16px; z-index: 40;
+  position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 40;
   display: inline-flex; align-items: center; gap: 8px; min-height: 48px; min-width: 48px; justify-content: center;
   padding: 0 14px; background: var(--zap); color: #fff; text-decoration: none; border-radius: 999px;
   font: 700 .95rem var(--f-texto); box-shadow: 0 6px 16px -6px rgba(43,34,32,.5);
@@ -557,7 +557,7 @@ a:hover { color: var(--coral); }
 .zap svg { width: 24px; height: 24px; flex: none; }
 .zap__txt { display: none; }
 .zap--oculto { opacity: 0; visibility: hidden; }
-@media (min-width: 760px) { .zap__txt { display: inline; } .zap { padding: 0 20px 0 16px; right: 24px; bottom: 24px; } }
+@media (min-width: 760px) { .zap__txt { display: inline; } .zap { padding: 0 20px 0 16px; right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); } }
 
 /* Revelar ao rolar: só opacidade, só com JS e sem preferência por menos movimento */
 @media (prefers-reduced-motion: no-preference) {
