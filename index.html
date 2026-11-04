@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Grandstander:wght@600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261009">
+  <link rel="stylesheet" href="css/style.css?v=20261104">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -267,7 +267,7 @@
               <li><strong>Ser a pessoa de confiança:</strong> é com você que ela vai contar durante a festa, entre brincadeiras e muitas risadas.</li>
             </ul>
             <p class="aviso">Você passará o dia inteiro exclusivamente com uma criança e, quem sabe, voltar a ser criança também.</p>
-            <a class="btn btn--petroleo btn--bloco" data-form="crianca" href="#" target="_blank" rel="noopener noreferrer">Me inscrever</a>
+            <button class="btn btn--petroleo btn--bloco" type="button" id="abrir-limite" aria-haspopup="dialog">Me inscrever</button>
           </div>
         </article>
 
@@ -445,6 +445,21 @@
   <span class="zap__txt">Preciso de ajuda</span>
 </a>
 
+<!-- Aviso: limite de voluntários com criança -->
+<dialog class="aviso-dlg" id="limite" aria-labelledby="limite-titulo">
+  <div class="aviso-dlg__corpo">
+    <button class="aviso-dlg__fechar" type="button" id="limite-fechar" aria-label="Fechar aviso">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"/></svg>
+    </button>
+    <h2 id="limite-titulo">As vagas para ficar com crianças esgotaram</h2>
+    <p>Chegamos ao limite de voluntários com criança. Mas ainda temos vagas abertas para <strong>voluntário de apoio</strong>, e a sua ajuda faz toda a diferença na festa.</p>
+    <div class="aviso-dlg__acoes">
+      <a class="btn btn--coral btn--bloco" data-form="apoio" href="#" target="_blank" rel="noopener noreferrer">Me inscrever como apoio</a>
+      <a class="btn btn--contorno btn--sm btn--bloco" data-form="crianca" href="#" target="_blank" rel="noopener noreferrer">Entrar na fila de espera</a>
+    </div>
+  </div>
+</dialog>
+
 <!-- Lightbox -->
 <dialog class="lb" id="lb" aria-label="Galeria de fotos">
   <div class="lb__barra">
@@ -464,6 +479,6 @@
   </button>
 </dialog>
 
-<script src="js/main.js?v=20261009"></script>
+<script src="js/main.js?v=20261104"></script>
 </body>
 </html>

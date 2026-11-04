@@ -478,6 +478,17 @@ a:hover { color: var(--coral); }
   .galeria { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 210px; gap: 14px; }
 }
 
+/* Aviso de limite de vagas */
+.aviso-dlg { border: 0; padding: 0; margin: auto; width: min(92vw, 480px); border-radius: var(--r-lg); background: var(--papel); color: var(--tinta); box-shadow: var(--sombra); border-top: 8px solid var(--navy); }
+.aviso-dlg::backdrop { background: rgba(23, 58, 71, .75); }
+.aviso-dlg__corpo { position: relative; padding: 32px 24px 24px; }
+.aviso-dlg h2 { margin: 0 40px 12px 0; font: 800 1.5rem/1.2 var(--f-titulo); color: var(--navy); }
+.aviso-dlg p { margin: 0 0 24px; }
+.aviso-dlg__acoes { display: grid; gap: 12px; }
+.aviso-dlg__fechar { position: absolute; top: 12px; right: 12px; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--areia); color: var(--navy); cursor: pointer; }
+.aviso-dlg__fechar:hover { background: var(--mostarda); }
+.aviso-dlg__fechar svg { width: 22px; height: 22px; }
+
 /* Lightbox */
 .lb { border: 0; padding: 0; margin: 0; max-width: none; max-height: none; width: 100%; height: 100%; background: rgba(23, 58, 71, .99); color: var(--creme); }
 .lb::backdrop { background: rgba(23, 58, 71, .99); }

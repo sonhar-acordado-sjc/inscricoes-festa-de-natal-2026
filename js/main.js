@@ -111,6 +111,15 @@ const CONFIG = {
     a.replaceWith(btn);
   });
 
+  /* ---------- Aviso: limite de voluntários com criança ---------- */
+  const limite = document.getElementById('limite');
+  if (limite) {
+    document.getElementById('abrir-limite').addEventListener('click', () => limite.showModal());
+    document.getElementById('limite-fechar').addEventListener('click', () => limite.close());
+    limite.addEventListener('click', (e) => { if (e.target === limite) limite.close(); });
+    limite.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => limite.close()));
+  }
+
   /* ---------- Enviar para um amigo ---------- */
   const btnCompartilhar = document.getElementById('compartilhar');
   if (btnCompartilhar) {
